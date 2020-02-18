@@ -21,7 +21,7 @@ class ContentFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_content, null)
         arguments?.getInt("index")?.let {
-            view.contentRLayout.setBackgroundColor(bgRes[it])
+            view.contentRLayout.setBackgroundResource(bgRes[it])
             view.btn.setOnClickListener {
                 startActivity(Intent(activity, MainActivity::class.java))
             }
